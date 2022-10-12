@@ -107,3 +107,10 @@
   tyeagg:
   - rscadd: sensor capture gamemode
   - imageadd: sensor tower minimap blips
+2022-10-12:
+  Kuro020:
+  - balance: mech light cannon's main projectile and spread projectiles deal less
+      damage
+  - bugfix: fixed the mech lmg not dealing damage
+  ivanmixo:
+  - balance: Hivemind core is trackable by the xeno structure pinpointer
