@@ -762,7 +762,7 @@ datum/ammo/bullet/revolver/tp44
 	max_range = 15
 	damage = 100
 	penetration = 20
-	sundering = 15
+	sundering = 7.5
 
 /datum/ammo/bullet/shotgun/slug/on_hit_mob(mob/M,obj/projectile/P)
 	staggerstun(M, P, weaken = 1, stagger = 2, knockback = 1, slowdown = 2)
@@ -816,7 +816,7 @@ datum/ammo/bullet/revolver/tp44
 	damage = 50
 	damage_falloff = 0.5
 	penetration = 15
-	sundering = 3
+	sundering = 7
 
 /datum/ammo/bullet/shotgun/flechette_spread
 	name = "additional flechette"
@@ -828,7 +828,7 @@ datum/ammo/bullet/revolver/tp44
 	damage = 40
 	damage_falloff = 1
 	penetration = 25
-	sundering = 2.5
+	sundering = 5
 
 /datum/ammo/bullet/shotgun/buckshot
 	name = "shotgun buckshot shell"
@@ -1444,9 +1444,9 @@ datum/ammo/bullet/revolver/tp44
 	projectile_greyscale_colors = "#4f0303"
 
 /datum/ammo/bullet/tx54_spread/mech
-	damage = 25
-	penetration = 20
-	sundering = 2
+	damage = 20
+	penetration = 10
+	sundering = 1
 
 //10-gauge Micro rail shells - aka micronades
 /datum/ammo/bullet/micro_rail
@@ -1572,8 +1572,8 @@ datum/ammo/bullet/revolver/tp44
 		victim.visible_message(span_danger("[victim] is hit by the bomblet blast!"),
 			isxeno(victim) ? span_xenodanger("We are hit by the bomblet blast!") : span_highdanger("you are hit by the bomblet blast!"))
 		var/armor_block = victim.get_soft_armor("bomb")
-		victim.apply_damage(15, BRUTE, null, armor_block, updating_health = FALSE)
-		victim.apply_damage(15, BURN, null, armor_block, updating_health = TRUE)
+		victim.apply_damage(10, BRUTE, null, armor_block, updating_health = FALSE)
+		victim.apply_damage(10, BURN, null, armor_block, updating_health = TRUE)
 		staggerstun(victim, P, stagger = 1, slowdown = 1)
 
 /datum/ammo/micro_rail_cluster/on_leave_turf(turf/T, atom/firer, obj/projectile/proj)
@@ -2347,7 +2347,7 @@ datum/ammo/bullet/revolver/tp44
 
 /datum/ammo/energy/lasgun/marine/mech
 	name = "superheated laser bolt"
-	damage = 40
+	damage = 50
 	penetration = 20
 	sundering = 1
 	damage_falloff = 0.5
@@ -2360,7 +2360,7 @@ datum/ammo/bullet/revolver/tp44
 
 /datum/ammo/energy/lasgun/marine/mech/smg
 	name = "superheated pulsed laser bolt"
-	damage = 35
+	damage = 25
 	penetration = 15
 
 // Plasma //
